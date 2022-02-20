@@ -16,10 +16,12 @@ class Woo_Custom_Loader {
     }
 
     public function __construct() {
-
+        $this->set_constants();
+        $this->includes();
     }
 
     public function set_constants() {
+        $this->define( "WOO_CUSTOM_VERSION", "1.0" );
         $this->define( 'WOO_CUSTOM_PLUGIN_PATH', plugin_dir_path( WOO_CUSTOMER_PLUGIN_FILE ) );
         $this->define( 'WOO_CUSTOM_PLUGIN_BASENAME', plugin_basename( WOO_CUSTOMER_PLUGIN_FILE ) );
         $this->define( 'WOO_CUSTOM_URL', untrailingslashit( plugins_url( '/', WOO_CUSTOMER_PLUGIN_FILE ) ) );
