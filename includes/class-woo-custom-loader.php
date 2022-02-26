@@ -10,7 +10,7 @@ class Woo_Custom_Loader {
 
     public static function get_instance() {
         if( is_null( self::$_instance ) ) {
-            self::$_instance == new self();
+            self::$_instance = new self();
         }
         return self::$_instance;
     }
@@ -36,5 +36,6 @@ class Woo_Custom_Loader {
 
     public function includes() {
         require_once WOO_CUSTOM_PLUGIN_PATH . '/includes/class-woo-customer-form.php';
+        require_once WOO_CUSTOM_PLUGIN_PATH . '/includes/class-woo-customer-table.php';
     }
 }

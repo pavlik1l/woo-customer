@@ -25,6 +25,14 @@ class WOO_CUSTOMER_FORM {
 
     function woo_customer_shortcode() {
         ob_start();
+        wp_register_style(
+            'woo-customer-form-style',
+            WOO_CUSTOM_URL . '/assets/css/style.css',
+            [],
+            WOO_CUSTOM_VERSION,
+            'all'
+        );
+        wp_enqueue_style( 'woo-customer-form-style' );
         wp_register_script(
             'woo-customer-form',
             WOO_CUSTOM_URL . '/assets/js/form.js',
@@ -64,7 +72,7 @@ class WOO_CUSTOMER_FORM {
             wp_die( 'Error nonce' );
         }
 
-        if( !isset( $_POST['email'] ) || empty( $_POST['email'] ) ) {
+        if ( !isset( $_POST['email'] ) || empty( $_POST['email'] ) ) {
             $error_messages['email'] = 'The email field is empty';
         }
         else {
