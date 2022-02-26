@@ -28,11 +28,11 @@ class Woo_Custom_Loader {
 
     }
 
-	public function define( $constant_name, $constant_value ){
-		if( !defined( $constant_name ) ){
-			define( $constant_name, $constant_value );
-		}
-	}
+    public function define( $constant_name, $constant_value ){
+	 if( !defined( $constant_name ) ){
+		 define( $constant_name, $constant_value );
+	 }
+    }
 
     public function includes() {
         require_once WOO_CUSTOM_PLUGIN_PATH . '/includes/class-woo-customer-form.php';
