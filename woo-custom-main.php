@@ -7,7 +7,7 @@
 * Text Domain: woo-customer
 * Domain Path: /languages
 * Author URI: #
-* Description: ...
+* Description: Use the [woo_customer_form] shortcode to show the add customer form and use the [woo_customer_table] shortcode to show the table with customer data.
 */
 if( !defined('ABSPATH') ){
 	return;
